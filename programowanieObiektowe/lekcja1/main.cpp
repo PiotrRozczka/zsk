@@ -9,14 +9,19 @@ class Worker{
 	public:
 	string name = "Janusz";
 	string surname;
+	unsigned short int age;
 	
 	//definicja funkcji czlonkowskiej (metoda)
 	void showData(){
-		cout << "Imiê";
+		cout << "Imiê" << endl;
 	};
+	
+	void showName(){
+		cout << name << endl;
+	}
 };
 
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
 
 int main(int argc, char** argv) {
 	
@@ -26,7 +31,12 @@ int main(int argc, char** argv) {
 	
 	cout << pracownik.name << endl;
 	pracownik.showData();
-
+	pracownik.surname = "Kowalski";
+	pracownik.name = "Andrzej";
+	cout << "Imiê i nazwisko: \n" << pracownik.name << " "<< pracownik.surname << endl;
+	pracownik.age = 16;
+	cout << "Wiek wynosi: " << pracownik.age << endl;
+	pracownik.showName();
 	
 	return 0;
 }
