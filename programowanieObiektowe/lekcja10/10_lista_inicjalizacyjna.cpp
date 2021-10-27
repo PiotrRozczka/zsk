@@ -4,23 +4,25 @@ using namespace std;
 
 class Worker{
 	
-		int id {8};
+		const int id {8};
 		public:
 		string name {"Katarzyna"};
 		string surname {"Nowak"};
 		
-	//	Worker();
+		Worker();
 		Worker(int pId, string pName, string pSurname);
 		
 		void getData();
 		
 };
 
-//Worker::Worker(){
-//	id=13;
-//	name="DOMYOLNE IMIE";
-//	surname="DOMYOLNE NAZWISKO";
-//}
+Worker::Worker():
+	id {13},
+	name{"DOMYOLNE IMIE"},
+	surname{"DOMYOLNE NAZWISKO"}
+{
+	cout << "Konstruktor domyœlny" << endl;
+}
 
 Worker::Worker(int pId, string pName, string pSurname):
 id  {pId},
@@ -37,10 +39,10 @@ void Worker::getData(){
 
 int main(){
 	setlocale(LC_CTYPE, "polish");
-//	Worker nowak;
-//	nowak.getData();
-Worker nowak = Worker();
-nowak.getData();
+	Worker nowak;
+	nowak.getData();
+Worker nowak1 = Worker(1, "Jan", "Nowak");
+nowak1.getData();
 	
 	
 	return 0;
