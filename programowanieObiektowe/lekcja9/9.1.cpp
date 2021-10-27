@@ -8,11 +8,18 @@ class Worker{
 		string name {"Katarzyna"};
 		string surname {"Nowak"};
 		
-		Worker(int pId=1, string pName="NAME", string pSurname="SURNAME");
+		Worker();
+		Worker(int pId, string pName, string pSurname);
 		
 		void getData();
 		
 };
+
+Worker::Worker(){
+	id=13;
+	name="DOMYŚLNE IMIĘ";
+	surname="DOMYŚLNE NAZWISKO";
+}
 
 Worker::Worker(int pId, string pName, string pSurname){
 	id = pId;
@@ -21,17 +28,18 @@ Worker::Worker(int pId, string pName, string pSurname){
 }
 
 void Worker::getData(){
-	cout<<"Id: " << id << "\nImi�: " << name << ", nazwisko: " << surname << endl;
+	cout<<"Id: " << id << "\nImię: " << name << ", nazwisko: " << surname << endl;
 }
 
 int main(){
 	setlocale(LC_CTYPE, "polish");
-	Worker nowak = Worker();
-	
+	Worker nowak;
 	nowak.getData();
 	
-	Worker nowak1 = Worker(10, "Krystyna", "Pawlak");
+	Worker nowak2 = Worker();
+	nowak2.getData();
 	
+	Worker nowak1 = Worker(10, "Krystyna", "Pawlak");
 	nowak1.getData();
 	
 	return 0;
