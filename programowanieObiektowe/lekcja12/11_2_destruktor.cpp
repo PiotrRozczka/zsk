@@ -21,7 +21,7 @@ class Animal{
 	int Animal::s_count = 0; 
 
 	void Animal::getAmount(){
-	cout << "Liczba zwierz¹t: " << Animal::s_count << endl;
+	cout << "Liczba zwierzÄ…t: " << Animal::s_count << endl;
 }
 
 
